@@ -1,0 +1,9 @@
+Document: librtmidi-doc
+Title: Debian librtmidi Manual
+Author: Gary P. Schiavone <gary@music.mcgill.ca>
+Abstract: This is a programming manual for the librtmidi library.
+Section: Programming
+
+Format: HTML
+Index: /usr/share/doc/librtmidi-dev/api_ref/index.html
+Files: /usr/share/doc/librtmidi-dev/api_ref/*

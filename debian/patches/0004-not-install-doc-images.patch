@@ -1,0 +1,17 @@
+Description: Not install doc images
+Author: Jaromír Mikeš <mira.mikes@seznam.cz>
+Forwarded: no
+
+--- rtmidi.orig/configure.ac
++++ rtmidi/configure.ac
+@@ -120,8 +120,8 @@
+ AC_CONFIG_LINKS( [doc/doxygen/footer.html:doc/doxygen/footer.html] )
+ AC_CONFIG_LINKS( [doc/doxygen/header.html:doc/doxygen/header.html] )
+ AC_CONFIG_LINKS( [doc/doxygen/tutorial.txt:doc/doxygen/tutorial.txt] )
+-AC_CONFIG_LINKS( [doc/images/ccrma.gif:doc/images/ccrma.gif] )
+-AC_CONFIG_LINKS( [doc/images/mcgill.gif:doc/images/mcgill.gif] )
++#AC_CONFIG_LINKS( [doc/images/ccrma.gif:doc/images/ccrma.gif] )
++#AC_CONFIG_LINKS( [doc/images/mcgill.gif:doc/images/mcgill.gif] )
+ 
+ # Checks for package options and external software
+ AC_CANONICAL_HOST

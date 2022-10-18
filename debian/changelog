@@ -1,0 +1,232 @@
+rtmidi (4.0.0-1) unstable; urgency=medium
+
+  * Upload to unstable.
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Install lib*.a files in -dev package
+  * Remove unused variables from d/rules
+  * Bump dh-compat to 13
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Tue, 27 Oct 2020 22:34:00 +0100
+
+rtmidi (4.0.0-1~exp1) experimental; urgency=medium
+
+  * New upstream version 4.0.0
+
+  [ Jaromír Mikeš ]
+  * Patch forwarded.
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Set Vcs-* to salsa.debian.org
+  * Use debhelper-compat instead of debian/compat
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Refresh patches
+    * Drop patches applied upstream
+  * Rename binary package to "librtmidi5" to reflect soname bump
+  * Only depend on libasound2-dev on linux-any
+  * Update d/copyright
+    * Add 'licensecheck' target
+    * Generate initial d/copyright_hints
+  * Add salsa-ci configuration
+  * Declare that building this package does not require 'root' powers.
+  * Update d/watch
+  * Bump dh-compat to 12
+  * Bump standards version to 4.5.0
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Mon, 13 Apr 2020 23:49:53 +0200
+
+rtmidi (3.0.0~ds1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Fri, 27 Oct 2017 16:34:29 +0200
+
+rtmidi (3.0.0~ds1-1~exp3) experimental; urgency=medium
+
+  * Set hardening all.
+  * Patch to enable kFreeBSD/Hurd builds.
+  * Patches refreshed.
+  * Drop linux-any from arch-specifier.
+  * Patches renumbered.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Mon, 23 Oct 2017 01:10:22 +0200
+
+rtmidi (3.0.0~ds1-1~exp2) experimental; urgency=medium
+
+  * Add libjs-jquery as dep of doc package.
+  * Use .links file rather than creating them manually.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Sun, 22 Oct 2017 21:37:02 +0200
+
+rtmidi (3.0.0~ds1-1~exp1) experimental; urgency=medium
+
+  * New upstream version 3.0.0~ds1
+
+  [ Jaromír Mikeš ]
+  * Repack by copyright file now.
+    * Exclude .gitignore file on repack.
+  * Add description to patch.
+  * Add doc-base file.
+
+  [ IOhannes m zmölnig ]
+  * Refreshed and updated patches
+    * Fixed configure.ac patch
+    * Unbreak configure.ac if 'prefix' is defined
+  * Soname bump: librtmidi3 -> librtmidi4
+  * Added librtmidi-doc
+    * Suggested by the -dev package
+  * Removed .gitignore
+  * Dropped unused rule in d/rules
+  * Install README.md
+  * Added myself to uploaders
+  * Bumped standards to 4.1.1
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Sun, 08 Oct 2017 23:21:26 +0200
+
+rtmidi (2.1.1~ds0-5) unstable; urgency=medium
+
+  * Tune .gitignore file.
+  * Set compat/dh 10.
+  * Sign tags.
+  * Update copyright file.
+  * Bump Standards.
+  * Fix FTCBS (Closes: #877386).
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Tue, 03 Oct 2017 09:23:43 +0200
+
+rtmidi (2.1.1~ds0-4) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Sun, 24 Jul 2016 14:35:30 +0200
+
+rtmidi (2.1.1~ds0-3) experimental; urgency=medium
+
+  * Fix pkg-config-bad-directive properly.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Mon, 27 Jun 2016 18:17:22 +0200
+
+rtmidi (2.1.1~ds0-2) experimental; urgency=medium
+
+  * Install headers as upstream intended.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Mon, 27 Jun 2016 18:17:22 +0200
+
+rtmidi (2.1.1~ds0-1) experimental; urgency=medium
+
+  * Switch to get-orig-source.
+  * Imported Upstream version 2.1.1~ds0
+  * Bump Standards.
+  * Fix VCS fields.
+  * Patches refreshed/removed.
+  * Add patch to not install doc images.
+  * Install files by install file rather than rules file.
+  * Fix some hardening.
+  * Fix pkg-config-bad-directive.
+  * Install upstream changelog.
+  * Bump soname.
+  * Install both headers.
+  * Drop useless patches.
+  * Add patch to pass cxxflags.
+  * Remove ${shlibs:Depends} from dev package.
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Fri, 17 Jun 2016 22:32:30 +0200
+
+rtmidi (2.1.0~ds0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Rename librtmidi2 for GCC 5 transition.
+  * debian/control: Bump Standards-Version.
+  * debian/patches/0001-buildsystem.patch: Honor LDFLAGS.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 05 Aug 2015 01:22:07 +0200
+
+rtmidi (2.1.0~ds0-3) unstable; urgency=low
+
+  * Build with autotools-dev. (Closes: #751099)
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Tue, 10 Jun 2014 13:55:50 +0200
+
+rtmidi (2.1.0~ds0-2) unstable; urgency=low
+
+  * Upload to unstable. (Closes: #747775) (Closes: #750332) (Closes: #727498)
+
+ -- Jaromír Mikeš <mira.mikes@seznam.cz>  Mon, 09 Jun 2014 22:36:36 +0200
+
+rtmidi (2.1.0~ds0-1) experimental; urgency=medium
+
+  [ Jaromír Mikeš ]
+  * Added myself as uploader
+
+  [ Alessio Treglia ]
+  * New upstream release.
+  * Bump SONAME.
+  * Various improvements to the repackaging mechanism.
+  * Bump Standards.
+  * Refresh debian/copyright.
+  * Refresh 0001-buildsystem.patch.
+  * Fix build tests.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Sat, 03 May 2014 23:21:12 +0100
+
+rtmidi (2.0.1~ds0-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+  [ Devin Anderson ]
+  * debian/control, debian/rules: build rtmidi with ALSA bindings
+
+  [ Alessio Treglia ]
+  * Fix VCS url.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 08 May 2013 08:35:00 +0200
+
+rtmidi (2.0.1~ds0-2) experimental; urgency=low
+
+  * Add support for powerpc64 builds.
+    Thanks to Hiroyuki Yamamoto for the patch. (Closes: #693592)
+
+ -- Alessio Treglia <alessio@debian.org>  Sun, 18 Nov 2012 11:08:16 +0000
+
+rtmidi (2.0.1~ds0-1) experimental; urgency=low
+
+  * New upstream release.
+  * Refresh 0001-buildsystem.patch
+
+ -- Alessio Treglia <alessio@debian.org>  Thu, 02 Aug 2012 13:41:05 +0200
+
+rtmidi (2.0.0~ds0-1) experimental; urgency=low
+
+  * Imported Upstream version 2.0.0~ds0
+  * Refresh buildsystem.
+  * Pass -Xtests/midiprobe.cpp~ to dh_clean to avoid unexpected clean-up
+    of upstream sources.
+  * Refresh debian/copyright.
+  * Bump Standards.
+
+ -- Alessio Treglia <alessio@debian.org>  Wed, 18 Jul 2012 15:20:42 +0200
+
+rtmidi (1.0.15~ds0-2) unstable; urgency=low
+
+  * Build on linux only.
+  * Fix wrong linking order.
+
+ -- Alessio Treglia <alessio@debian.org>  Sun, 05 Feb 2012 19:24:57 +0100
+
+rtmidi (1.0.15~ds0-1) unstable; urgency=low
+
+  * Initial release. (Closes: #656191)
+
+ -- Alessio Treglia <alessio@debian.org>  Tue, 17 Jan 2012 09:26:55 +0100

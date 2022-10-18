@@ -1,0 +1,86 @@
+Source: rtmidi
+Section: libs
+Priority: optional
+Maintainer: Debian Multimedia Maintainers <debian-multimedia@lists.debian.org>
+Uploaders:
+ Alessio Treglia <alessio@debian.org>,
+ Jaromír Mikeš <mira.mikes@seznam.cz>,
+ IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ libasound2-dev [linux-any],
+ libjack-dev,
+Build-Depends-Indep:
+ doxygen,
+Standards-Version: 4.5.0
+Rules-Requires-Root: no
+Homepage: https://www.music.mcgill.ca/~gary/rtmidi/
+Vcs-Git: https://salsa.debian.org/multimedia-team/rtmidi.git
+Vcs-Browser: https://salsa.debian.org/multimedia-team/rtmidi
+
+Package: librtmidi5
+Architecture: any
+Multi-Arch: same
+Pre-Depends:
+ ${misc:Pre-Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: C++ library for realtime MIDI input/ouput
+ RtMidi is a set of C++ classes that provides a common API (Application
+ Programming Interface) for realtime MIDI input/output across Linux
+ (native ALSA, JACK, and OSS), Macintosh OS X, SGI, and Windows
+ (DirectSound and ASIO) operating systems. RtMidi significantly
+ simplifies the process of interacting with computer audio hardware. It
+ was designed with the following objectives:
+ .
+  * object-oriented C++ design
+  * simple, common API across all supported platforms
+  * only one source and two header files for easy inclusion in
+    programming projects
+  * MIDI device enumeration
+ .
+ MIDI input and output functionality are separated into two classes,
+ RtMidiIn and RtMidiOut. Each class instance supports only a single MIDI
+ connection. RtMidi does not provide timing functionality (i.e., output
+ messages are sent immediately). Input messages are timestamped with delta
+ times in seconds (via a double floating point type). MIDI data is passed
+ to the user as raw bytes using an std::vector<unsigned char>.
+ .
+ This package provides the shared library.
+
+Package: librtmidi-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends:
+ libasound2-dev [linux-any],
+ libjack-dev,
+ librtaudio-dev,
+ librtmidi5 (= ${binary:Version}),
+ ${misc:Depends},
+Suggests: librtmidi-doc
+Description: C++ library for realtime MIDI input/ouput (development files)
+ RtMidi is a set of C++ classes that provides a common API (Application
+ Programming Interface) for realtime MIDI input/output across Linux
+ (native ALSA, JACK, and OSS), Macintosh OS X, SGI, and Windows
+ (DirectSound and ASIO) operating systems. RtMidi significantly
+ simplifies the process of interacting with computer audio hardware.
+ .
+ This package provides the development files.
+
+Package: librtmidi-doc
+Architecture: all
+Section: doc
+Multi-Arch: foreign
+Depends:
+ ${misc:Depends},
+ libjs-jquery,
+Description: C++ library for realtime MIDI input/ouput (documentation files)
+ RtMidi is a set of C++ classes that provides a common API (Application
+ Programming Interface) for realtime MIDI input/output across Linux
+ (native ALSA, JACK, and OSS), Macintosh OS X, SGI, and Windows
+ (DirectSound and ASIO) operating systems. RtMidi significantly
+ simplifies the process of interacting with computer audio hardware.
+ .
+ This package provides the API documentation.
